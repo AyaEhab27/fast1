@@ -32,14 +32,19 @@ def load_labels(language: str, type: str):
         return {}
 
 # Load models once
+AL_model_path = os.path.join(os.path.dirname(__file__), "models", "Aalpha2_sign_language_model.h5")
+AN_model_path = os.path.join(os.path.dirname(__file__), "models", "AN2_sign_language_model.h5")
+EL_model_path = os.path.join(os.path.dirname(__file__), "models", "E_alpha_sign_language_model.h5")
+EN_model_path = os.path.join(os.path.dirname(__file__), "models", "EN_sign_language_model.h5")
+
 models = {
     "arabic": {
-        "letters": tf.keras.models.load_model("sign_language_api/models/Aalpha2_sign_language_model.h5"),
-        "numbers": tf.keras.models.load_model("sign_language_api/models/AN2_sign_language_model.h5"),
+        "letters": tf.keras.models.load_model(AL_model_path, compile=False),
+        "numbers": tf.keras.models.load_model(AN_model_path, compile=False),
     },
     "english": {
-        "letters": tf.keras.models.load_model("sign_language_api/models/E_alpha_sign_language_model.h5"),
-        "numbers": tf.keras.models.load_model("sign_language_api/models/EN_sign_language_model.h5"),
+        "letters": tf.keras.models.load_model(EL_model_path, compile=False),
+        "numbers": tf.keras.models.load_model(EN_model_path, compile=False),
     },
 }
 
