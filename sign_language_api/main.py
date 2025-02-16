@@ -34,12 +34,12 @@ def load_labels(language: str, type: str):
 # Load models once
 models = {
     "arabic": {
-        "letters": tf.keras.models.load_model("models/Aalpha2_sign_language_model.h5"),
-        "numbers": tf.keras.models.load_model("models/AN2_sign_language_model.h5"),
+        "letters": tf.keras.models.load_model("sign_language_api/models/Aalpha2_sign_language_model.h5"),
+        "numbers": tf.keras.models.load_model("sign_language_api/models/AN2_sign_language_model.h5"),
     },
     "english": {
-        "letters": tf.keras.models.load_model("models/E_alpha_sign_language_model.h5"),
-        "numbers": tf.keras.models.load_model("models/EN_sign_language_model.h5"),
+        "letters": tf.keras.models.load_model("sign_language_api/models/E_alpha_sign_language_model.h5"),
+        "numbers": tf.keras.models.load_model("sign_language_api/models/EN_sign_language_model.h5"),
     },
 }
 
