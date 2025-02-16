@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+tensorflow==2.12.1
+opencv-python-headless
+mediapipe
+numpy>=1.22,<1.24.4
+gTTS
+websockets
